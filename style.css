@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../fotos/banner.jpg') center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.slogan {
+  font-size: 1.5em;
+  color: gold;
+}
+
+nav a {
+  margin: 0 15px;
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.galeria .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.loja .produto {
+  margin: 20px 0;
+}
+
+button {
+  background: gold;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: black;
+  color: gold;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}

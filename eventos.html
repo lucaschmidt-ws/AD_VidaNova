@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos | AD Vida Nova Sapiranga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="page-loader" id="loader">
+  <img src="assets/img/logo.png" alt="AD Vida Nova" class="loader-logo" />
+  <div class="loader-text">EVENTOS</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/img/logo.png" alt="Logo AD Vida Nova" />
+      <div class="nav-logo-text">
+        <span class="church-name">AD VIDA NOVA</span>
+        <span class="church-sub">Sapiranga &bull; Mídia</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="eventos.html" class="active">Eventos</a>
+      <a href="loja.html">Loja</a>
+      <a href="loja.html" class="btn btn-gold">Encomendar</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Início</a>
+  <a href="galeria.html">Galeria de Fotos</a>
+  <a href="eventos.html">Eventos</a>
+  <a href="loja.html">Loja</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Início</a>
+    <span>/</span>
+    <span>Eventos</span>
+  </div>
+  <h1 class="page-hero-title">Programação de Eventos</h1>
+  <p class="page-hero-subtitle">Fique por dentro da agenda da AD Vida Nova Sapiranga</p>
+</div>
+
+<!-- EVENTOS -->
+<main class="events-calendar section">
+  <div class="container">
+
+    <!-- FILTROS -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px" class="fade-in">
+      <button class="btn btn-gold" onclick="filterEvents('todos')" id="filter-todos">Todos</button>
+      <button class="btn btn-ghost" onclick="filterEvents('culto')" id="filter-culto">Cultos</button>
+      <button class="btn btn-ghost" onclick="filterEvents('jovens')" id="filter-jovens">Jovens</button>
+      <button class="btn btn-ghost" onclick="filterEvents('especial')" id="filter-especial">Especiais</button>
+      <button class="btn btn-ghost" onclick="filterEvents('infantil')" id="filter-infantil">Infantil</button>
+    </div>
+
+    <!-- LISTA DE EVENTOS -->
+    <div class="events-full-list fade-in" id="eventsList">
+
+      <div class="event-full" data-category="culto">
+        <div class="event-full-date">
+          <div class="event-full-day">13</div>
+          <div class="event-full-month">Abr</div>
+        </div>
+        <div class="event-full-info">
+          <h3 class="event-full-title">Culto de Domingo</h3>
+          <p class="event-full-desc">Venha adorar com a nossa comunidade. Pregação da Palavra, louvor e comunhão.</p>
+          <div class="event-full-meta">
+            <span class="event-meta-item">&#8987; 18h00</span>
+            <span class="event-meta-item">&#128205; Templo Principal</span>
+          </div>
+        </div>
+        <span class="event-full-tag">Culto</span>
+      </div>
+
+      <div class="event-full" data-category="jovens">
+        <div class="event-full-date">
+          <div class="event-full-day">20</div>
+          <div class="event-full-month">Abr</div>
+        </div>
+        <div class="event-full-info">
+          <h3 class="event-full-title">Conferência de Jovens</h3>
+          <p class="event-full-desc">Um encontro especial para os jovens com pregação, louvor e muito mais. Convide seus amigos!</p>
+          <div class="event-full-meta">
+            <span class="event-meta-item">&#8987; 19h30</span>
+            <span class="event-meta-item">&#128205; Salão Principal</span>
+          </div>
+        </div>
+        <span class="event-full-tag">Jovens</span>
+      </div>
+
+      <div class="event-full" data-category="especial">
+        <div class="event-full-date">
+          <div class="event-full-day">27</div>
+          <div class="event-full-month">Abr</div>
+        </div>
+        <div class="event-full-info">
+          <h3 class="event-full-title">Culto de Santa Ceia</h3>
+          <p class="event-full-desc">Momento solene de celebração e remembrança do sacrifício de Cristo. Toda família é bem-vinda.</p>
+          <div class="event-full-meta">
+            <span class="event-meta-item">&#8987; 18h00</span>
+            <span class="event-meta-item">&#128205; Templo Principal</span>
+          </div>
+        </div>
+        <span class="event-full-tag">Especial</span>
+      </div>
+
+      <div class="event-full" data-category="culto">
+        <div class="event-full-date">
+          <div class="event-full-day">04</div>
+          <div class="event-full-month">Mai</div>
+        </div>
+        <div class="event-full-info">
+          <h3 class="event-full-title">Culto de Domingo</h3>
+          <p class="event-full-desc">Culto regular de domingo com louvor e pregação da Palavra de Deus.</p>
+          <div class="event-full-meta">
+            <span class="event-meta-item">&#8987; 18h00</span>
+            <span class="event-meta-item">&#128205; Templo Principal</span>
+          </div>
+        </div>
+        <span class="event-full-tag">Culto</span>
+      </div>
+
+      <div class="event-full" data-category="infantil">
+        <div class="event-full-date">
+          <div class="event-full-day">10</div>
+          <div class="event-full-month">Mai</div>
+        </div>
+        <div class="event-full-info">
+          <h3 class="event-full-title">Dia das Crianças na Igreja</h3>
+          <p class="event-full-desc">Programação especial para as crianças com atividades, brincadeiras e muito amor.</p>
+          <div class="event-full-meta">
+            <span class="event-meta-item">&#8987; 15h00</span>
+            <span class="event-meta-item">&#128205; Salão de Eventos</span>
+          </div>
+        </div>
+        <span class="event-full-tag">Infantil</span>
+      </div>
+
+      <div class="event-full" data-category="especial">
+        <div class="event-full-date">
+          <div class="event-full-day">18</div>
+          <div class="event-full-month">Mai</div>
+        </div>
+        <div class="event-full-info">
+          <h3 class="event-full-title">Culto de Pentecostes</h3>
+          <p class="event-full-desc">Celebração especial do Dia de Pentecostes com culto solene e pregação temática.</p>
+          <div class="event-full-meta">
+            <span class="event-meta-item">&#8987; 18h00</span>
+            <span class="event-meta-item">&#128205; Templo Principal</span>
+          </div>
+        </div>
+        <span class="event-full-tag">Especial</span>
+      </div>
+
+    </div>
+
+    <!-- CTA GALERIA -->
+    <div style="margin-top:60px;text-align:center" class="fade-in">
+      <p style="color:var(--gray);margin-bottom:20px">Após os eventos, confira as fotos na galeria!</p>
+      <a href="galeria.html" class="btn btn-gold btn-lg">Ver Galeria de Fotos</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/img/logo.png" alt="Logo" />
+          <div>
+            <div class="footer-logo-name">AD VIDA NOVA</div>
+            <div class="footer-logo-sub">Sapiranga &bull; RS</div>
+          </div>
+        </div>
+        <p class="footer-brand-desc">Acompanhe a programação da AD Vida Nova Sapiranga.</p>
+        <p class="footer-slogan">"Servindo com excelência"</p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Navegação</h4>
+        <div class="footer-links">
+          <a href="index.html">Início</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="eventos.html">Eventos</a>
+          <a href="loja.html">Loja</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Eventos</h4>
+        <div class="footer-links">
+          <a href="eventos.html">Cultos</a>
+          <a href="eventos.html">Conferências</a>
+          <a href="eventos.html">Jovens</a>
+          <a href="eventos.html">Infantil</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contato</h4>
+        <div class="footer-contact-item"><span>&#128205;</span> Sapiranga, RS</div>
+        <div class="footer-contact-item"><span>&#128241;</span> (51) 9 9999-9999</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">&copy; 2026 <strong>AD Vida Nova Sapiranga</strong></p>
+      <p class="footer-bottom-text">Feito com &#10084; pela equipe de <strong>Mídia</strong></p>
+    </div>
+  </div>
+</footer>
+
+<div class="scroll-top" id="scrollTop">&#8593;</div>
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+function filterEvents(cat) {
+  const items = document.querySelectorAll('.event-full');
+  const btns = document.querySelectorAll('[id^="filter-"]');
+  btns.forEach(b => { b.className = 'btn btn-ghost'; });
+  document.getElementById('filter-' + cat).className = 'btn btn-gold';
+  items.forEach(item => {
+    if (cat === 'todos' || item.dataset.category === cat) {
+      item.style.display = 'flex';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
